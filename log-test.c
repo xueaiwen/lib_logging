@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "logging.h"
+#include "lib_logging.h"
 
 #define TUPLE_LEN 16
 
@@ -17,16 +17,16 @@ int main()
 {
 	int num = 5;
 	
-	//È·¶¨ÈÕÖ¾¼¶±ğ,Ö»ÓĞ¸ßÓÚÉèÖÃµÄÈÕÖ¾¼¶±ğ²Å»á´òÓ¡
+	//ç¡®å®šæ—¥å¿—çº§åˆ«,åªæœ‰é«˜äºè®¾ç½®çš„æ—¥å¿—çº§åˆ«æ‰ä¼šæ‰“å°
 	log_setlevel(WARN);
 	
-	//´òÓ¡´íÎóÈÕÖ¾£¬¼¶±ğ3
+	//æ‰“å°é”™è¯¯æ—¥å¿—ï¼Œçº§åˆ«3
 	log_err("setting server to %s %d", ep_tostring(num), 666);
-	//´òÓ¡´íÎóÈÕÖ¾£¬¼¶±ğ2
+	//æ‰“å°é”™è¯¯æ—¥å¿—ï¼Œçº§åˆ«2
 	log_warn("setting server to %s %d", ep_tostring(num), 666);
-	//´òÓ¡´íÎóÈÕÖ¾£¬¼¶±ğ1
+	//æ‰“å°é”™è¯¯æ—¥å¿—ï¼Œçº§åˆ«1
 	log_info("setting server to %s %d", ep_tostring(num), 666);
-	//´òÓ¡´íÎóÈÕÖ¾£¬¼¶±ğ0
+	//æ‰“å°é”™è¯¯æ—¥å¿—ï¼Œçº§åˆ«0
 	log_debug("setting server to %s %d", ep_tostring(num), 666);
 	
 	LogLevel level  = log_getlevel();
